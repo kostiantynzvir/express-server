@@ -7,7 +7,6 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "dev": "vite",
-    "prebuild": "npm install",
     "build": "vite build"
   },
   "keywords": [
