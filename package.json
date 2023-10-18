@@ -4,14 +4,11 @@
   "description": "Kegen decoder with custom hash engine",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
     "dev": "vite",
-    "prebuild": "npm run prettier",
-    "build": "vite build",
-    "serve": "vite preview",
-    "prettier": "prettier --write ."
+    "prebuild": "npm install",
+    "build": "vite build"
   },
   "keywords": [
     "decode",
@@ -32,7 +29,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "prettier": "^3.0.2",
     "vite": "^4.4.9"
   }
 }
