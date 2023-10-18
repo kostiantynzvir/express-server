@@ -1,0 +1,38 @@
+{
+  "name": "kegen-decoder",
+  "version": "0.0.1",
+  "description": "Kegen decoder with custom hash engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "dev": "vite",
+    "prebuild": "npm run prettier",
+    "build": "vite build",
+    "serve": "vite preview",
+    "prettier": "prettier --write ."
+  },
+  "keywords": [
+    "decode",
+    "sha",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Sehan Ivanka Kahandawala",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.0.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.2",
+    "vite": "^4.4.9"
+  }
+}
