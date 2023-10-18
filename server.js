@@ -14,7 +14,7 @@ app.use(
     },
   }),
 );
-app.set('trust proxy', true);
+app.set('trust proxy', 1);
 const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
