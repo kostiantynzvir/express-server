@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const app = express();
+const otpRoutes = require('./routes/otpRoutes'); 
 app.use(compression());
 app.use(
   helmet.contentSecurityPolicy({
@@ -28,16 +29,5 @@ app.use(limiter);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
 app.use(cors());
-const getHashedCode = require("./api/core.js");
-app.post("/hash", (req, res) => {
-  const { hashid } = req.body;
-  const hashedCode = getHashedCode(hashid);
-
-  if (String(hashedCode).length > 0) {
-    res.json({ success: true, result: hashedCode });
-  } else {
-    res.json({ success: false, result: "Failed" });
-  }
-});
-
+app.use('/api/v1/otp', otpRoutes);
 app.listen(3000, () => console.log("Server listening on port 3000"));
