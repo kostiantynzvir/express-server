@@ -186,21 +186,13 @@ function Utf8Encode(string) {
   return utftext;
 }
 function binb2hex(binarray) {
-  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+  var hex_tab = "0123456789abcdef";
   var str = "";
-  for (var i = 0; i < binarray.length * 4; i++) {
+  for (var i = 0; i < 3; i++) {
     str +=
       hex_tab.charAt((binarray[i >> 2] >> ((3 - (i % 4)) * 8 + 4)) & 0xf) +
       hex_tab.charAt((binarray[i >> 2] >> ((3 - (i % 4)) * 8)) & 0xf);
-    //   console.log(
-    //     "strCode",
-    //     i,
-    //     ":",
-    //     (binarray[i >> 2] >> ((3 - (i % 4)) * 8 + 4)) & 0xf,
-    //     (binarray[i >> 2] >> ((3 - (i % 4)) * 8)) & 0xf
-    //   );
   }
-  console.log("str:", str);
   return str;
 }
 function getHashedCode(hashid) {
