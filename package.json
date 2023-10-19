@@ -1,25 +1,22 @@
 {
-  "name": "kegen-decoder",
+  "name": "express-server",
   "version": "0.0.1",
-  "description": "Kegen decoder with custom hash engine",
+  "description": "Express Backend",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js",
-    "dev": "vite",
-    "build": "vite build"
+    "server": "nodemon server.js"
   },
   "keywords": [
-    "decode",
-    "sha",
+    "express",
+    "node.js",
     "javascript",
-    "html",
-    "css"
+    "backend",
+    "static page"
   ],
-  "author": "Sehan Ivanka Kahandawala",
+  "author": "Portfolio example",
   "license": "ISC",
   "dependencies": {
-    "@vitejs/plugin-react": "^4.0.4",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "compression": "^1.7.4",
@@ -30,7 +27,6 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
-    "vite": "^4.4.9"
+    "nodemon": "^3.0.1"
   }
 }
