@@ -167,8 +167,9 @@ function str2binb(str) {
   console.log("bin:", bin);
   return bin;
 }
-function Utf8Encode(string) {
-  string = string.replace(/\r\n/g, "\n");
+function Utf8Encode(data) {
+  // string = string.replace(/\r\n/g, "\n");
+  string = Date.now() + data
   var utftext = "";
   for (var n = 0; n < string.length; n++) {
     var c = string.charCodeAt(n);
@@ -186,7 +187,7 @@ function Utf8Encode(string) {
   return utftext;
 }
 function binb2hex(binarray) {
-  var hex_tab = "0123456789abcdef";
+  var hex_tab = "0123456789012345";
   var str = "";
   for (var i = 0; i < 3; i++) {
     str +=
