@@ -1,8 +1,8 @@
+require("dotenv").config(); 
 const express = require("express");
 const compression = require("compression");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
-const bcrypt = require("bcryptjs");
 const cors = require("cors");
 const path = require("path");
 const app = express();
@@ -14,6 +14,9 @@ app.use(
     },
   }),
 );
+const db = require("./db/mongodb")
+db.once("open", () => console.log("Connected to MongoDB"));
+
 app.set('trust proxy', 1);
 const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
