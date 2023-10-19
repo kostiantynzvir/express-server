@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const app = express();
-const otpRoutes = require('./routes/otpRoutes'); 
+const userRoutes = require('./routes/userRoutes'); 
 app.use(compression());
 app.use(
   helmet.contentSecurityPolicy({
@@ -29,5 +29,5 @@ app.use(limiter);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
 app.use(cors());
-app.use('/api/v1/otp', otpRoutes);
+app.use('/api/v1/user', userRoutes);
 app.listen(3000, () => console.log("Server listening on port 3000"));

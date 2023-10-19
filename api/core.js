@@ -155,7 +155,6 @@ function core_sha256(m, l) {
     HASH[6] = safe_add(g, HASH[6]);
     HASH[7] = safe_add(h, HASH[7]);
   }
-  console.log("HASH:", HASH);
   return HASH;
 }
 function str2binb(str) {
@@ -164,7 +163,6 @@ function str2binb(str) {
   for (var i = 0; i < str.length * chrsz; i += chrsz) {
     bin[i >> 5] |= (str.charCodeAt(i / chrsz) & mask) << (24 - (i % 32));
   }
-  console.log("bin:", bin);
   return bin;
 }
 function Utf8Encode(data) {
